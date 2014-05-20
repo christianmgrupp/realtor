@@ -1,0 +1,20 @@
+The General HTML is stored inside of:
+/sites/all/themes/quickdrop/
+	html.tpl.php (This is the container TPL)
+	page.tpl.php (This is included inside of html.tpl.php)
+	node.tpl.php (This is what goes inside of page.tpl.php, it is the format for when you have a piece of content in drupal)
+
+All of the css (look at my pattern in the css to include images for css files), img (look at the pattern in the template files to learn to include images in the html), and js are put into their named folder, they are invoked in quickdrop.info
+
+The next layer of information is at the block layer inside of drupal, you will see this tie into page.tpl.php.
+	The blocks areas are defined in quickdrop.info
+	They are “summoned” from where a text like <?php print render($page['highlighted']); ?> is inside of page.tpl.php
+	What goes into this block is set inside of the Drupal Admin under Structure->Blocks
+		Under Structure->Blocks you are able to add in custom content
+
+
+
+If you don’t see your changes show up, make sure to Flush Your Caches by click Home in the Toolbar -> Flush All Caches
+
+
+That should be the general gist of things, call me with questions. 917.689.1673
